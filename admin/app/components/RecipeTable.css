@@ -1,0 +1,61 @@
+.custom-table thead th, .custom-table thead .TableHead {
+  font-size: 0.95rem !important;
+  font-weight: 600 !important;
+  padding-top: 0.7rem !important;
+  padding-bottom: 0.7rem !important;
+  border-radius: 0.5rem !important;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1) !important;
+  letter-spacing: 0.01em !important;
+  background: linear-gradient(to left, #6366f1 0%, #23272a 100%) !important;
+  color: #fff !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  border: none !important;
+}
+
+.custom-table thead th {
+  /* Responsive widths for each column */
+}
+
+.custom-table thead th:nth-child(1) {
+  width: 140px;
+  min-width: 120px;
+  max-width: 180px;
+}
+.custom-table thead th:nth-child(2) {
+  width: 100px;
+  min-width: 80px;
+  max-width: 140px;
+}
+.custom-table thead th:nth-child(3),
+.custom-table thead th:nth-child(4),
+.custom-table thead th:nth-child(5) {
+  width: 90px;
+  min-width: 70px;
+  max-width: 120px;
+  text-align: center;
+}
+
+.custom-table thead th,
+.custom-table thead .TableHead {
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+}
+
+.recipe-table-header {
+  background: none !important;
+  border: none !important;
+}
+
+/* Additional specificity for table header */
+.custom-table > thead > tr > th {
+  height: auto !important;
+  line-height: 1.5 !important;
+  vertical-align: middle !important;
+}
+
+/* Reset any inherited styles */
+.custom-table thead th[class*="text-"] {
+  text-align: inherit !important;
+}

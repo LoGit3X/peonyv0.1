@@ -1,0 +1,51 @@
+nohup: ignoring input
+
+> rest-express@1.0.0 dev
+> tsx server/index.ts
+
+/root/Peony/admin/node_modules/bindings/bindings.js:126
+  err = new Error(
+        ^
+
+Error: Could not locate the bindings file. Tried:
+ → /root/Peony/admin/node_modules/sqlite3/build/node_sqlite3.node
+ → /root/Peony/admin/node_modules/sqlite3/build/Debug/node_sqlite3.node
+ → /root/Peony/admin/node_modules/sqlite3/build/Release/node_sqlite3.node
+ → /root/Peony/admin/node_modules/sqlite3/out/Debug/node_sqlite3.node
+ → /root/Peony/admin/node_modules/sqlite3/Debug/node_sqlite3.node
+ → /root/Peony/admin/node_modules/sqlite3/out/Release/node_sqlite3.node
+ → /root/Peony/admin/node_modules/sqlite3/Release/node_sqlite3.node
+ → /root/Peony/admin/node_modules/sqlite3/build/default/node_sqlite3.node
+ → /root/Peony/admin/node_modules/sqlite3/compiled/20.19.2/linux/x64/node_sqlite3.node
+ → /root/Peony/admin/node_modules/sqlite3/addon-build/release/install-root/node_sqlite3.node
+ → /root/Peony/admin/node_modules/sqlite3/addon-build/debug/install-root/node_sqlite3.node
+ → /root/Peony/admin/node_modules/sqlite3/addon-build/default/install-root/node_sqlite3.node
+ → /root/Peony/admin/node_modules/sqlite3/lib/binding/node-v115-linux-x64/node_sqlite3.node
+    at bindings (/root/Peony/admin/node_modules/bindings/bindings.js:126:9)
+    at Object.<anonymous> (/root/Peony/admin/node_modules/sqlite3/lib/sqlite3-binding.js:1:37)
+    at Module._compile (node:internal/modules/cjs/loader:1529:14)
+    at Object.transformer (/usr/local/lib/node_modules/tsx/dist/register-D2KMMyKp.cjs:2:1186)
+    at Module.load (node:internal/modules/cjs/loader:1275:32)
+    at Module._load (node:internal/modules/cjs/loader:1096:12)
+    at Module.require (node:internal/modules/cjs/loader:1298:19)
+    at require (node:internal/modules/helpers:182:18)
+    at Object.<anonymous> (/root/Peony/admin/node_modules/sqlite3/lib/sqlite3.js:2:17)
+    at Module._compile (node:internal/modules/cjs/loader:1529:14) {
+  tries: [
+    '/root/Peony/admin/node_modules/sqlite3/build/node_sqlite3.node',
+    '/root/Peony/admin/node_modules/sqlite3/build/Debug/node_sqlite3.node',
+    '/root/Peony/admin/node_modules/sqlite3/build/Release/node_sqlite3.node',
+    '/root/Peony/admin/node_modules/sqlite3/out/Debug/node_sqlite3.node',
+    '/root/Peony/admin/node_modules/sqlite3/Debug/node_sqlite3.node',
+    '/root/Peony/admin/node_modules/sqlite3/out/Release/node_sqlite3.node',
+    '/root/Peony/admin/node_modules/sqlite3/Release/node_sqlite3.node',
+    '/root/Peony/admin/node_modules/sqlite3/build/default/node_sqlite3.node',
+    '/root/Peony/admin/node_modules/sqlite3/compiled/20.19.2/linux/x64/node_sqlite3.node',
+    '/root/Peony/admin/node_modules/sqlite3/addon-build/release/install-root/node_sqlite3.node',
+    '/root/Peony/admin/node_modules/sqlite3/addon-build/debug/install-root/node_sqlite3.node',
+    '/root/Peony/admin/node_modules/sqlite3/addon-build/default/install-root/node_sqlite3.node',
+    '/root/Peony/admin/node_modules/sqlite3/lib/binding/node-v115-linux-x64/node_sqlite3.node'
+  ]
+}
+
+Node.js v20.19.2

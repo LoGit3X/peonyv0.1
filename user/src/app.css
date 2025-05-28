@@ -1,0 +1,123 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base styles with mobile-first approach */
+@layer base {
+  html {
+    -webkit-tap-highlight-color: transparent; /* Remove tap highlight on mobile */
+    touch-action: manipulation; /* Improve touch behavior */
+    -webkit-touch-callout: none; /* Disable callout on long-press */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    direction: rtl; /* Set RTL direction explicitly */
+    @apply bg-gray-100 text-gray-900 dark:bg-gray-800 dark:text-gray-200;
+    overscroll-behavior-y: none; /* Prevent pull-to-refresh on mobile */
+    font-family: 'Tahoma', 'Arial', sans-serif; /* Better font for Persian */
+    padding-bottom: 70px !important;
+  }
+
+  /* Improve form elements on mobile */
+  input, button, select, textarea {
+    font-size: 16px; /* Prevent zoom on focus in iOS */
+  }
+
+  /* Improve tap targets */
+  button, a {
+    @apply min-h-touch min-w-touch;
+  }
+}
+
+/* Component styles */
+@layer components {
+  .card {
+    @apply bg-card-bg rounded-xl p-4 shadow-md;
+  }
+
+  .nav-item {
+    @apply flex flex-col items-center justify-center p-2 text-xs;
+  }
+
+  .nav-item-active {
+    @apply text-primary-teal;
+  }
+
+  .food-item {
+    @apply bg-primary-teal rounded-xl p-3 text-text-on-teal shadow-lg flex flex-col items-center text-center;
+  }
+}
+
+/* Utility classes */
+@layer utilities {
+  .shadow-top {
+    box-shadow: 0 -4px 6px -1px rgba(0, 0, 0, 0.1), 0 -2px 4px -1px rgba(0, 0, 0, 0.06);
+  }
+
+  .safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom, 0);
+  }
+
+  .safe-top {
+    padding-top: env(safe-area-inset-top, 0);
+  }
+
+  /* Hide scrollbar but allow scrolling */
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none; /* Chrome, Safari and Opera */
+  }
+
+  /* RTL specific utilities */
+  .rtl-flip {
+    transform: scaleX(-1);
+  }
+
+  .rtl-swap-margin {
+    margin-right: var(--margin-left, 0);
+    margin-left: var(--margin-right, 0);
+  }
+
+  .rtl-text-right {
+    text-align: left;
+  }
+
+  .rtl-text-left {
+    text-align: right;
+  }
+
+  /* Fixed Position Navigation Bar - Always Visible */
+  .bottom-nav {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    z-index: 9999 !important;
+    position: fixed !important;
+    bottom: 0 !important;
+  }
+
+  /* Prevent any attempts to hide the navigation */
+  .bottom-nav.hidden,
+  .bottom-nav[style*="display: none"],
+  .bottom-nav[style*="visibility: hidden"] {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  /* Media query specifically for mobile devices */
+  @media (max-width: 768px) {
+    .bottom-nav {
+      display: flex !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+      z-index: 9999 !important;
+    }
+  }
+}
